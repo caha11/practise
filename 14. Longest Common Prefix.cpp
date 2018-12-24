@@ -8,9 +8,6 @@ public:
         string ans = "";
         if(strs.size() == 0) return ans;
         if(strs.size() == 1) return strs[0];
-        for(auto word : strs) {
-            if(word == "") return ans;
-        }
         
         for(int i = 0; i < strs[0].length(); i++) {
             char currC = strs[0][i];
