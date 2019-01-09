@@ -7,8 +7,6 @@ class Solution {
 public:
     int search(vector<int>& nums, int target) {
         
-        //if(nums.empty()) return -1;
-        
         int nums_size = nums.size();
         
         int left = 0;
@@ -17,7 +15,7 @@ public:
         while(left < right) {
             int mid = (left + right) / 2;
             if(nums[mid] > nums[right]) left = mid + 1;
-            else if(nums[left] ) right = mid;
+            else right = mid;
         }
         // Good.
         
