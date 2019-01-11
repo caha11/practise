@@ -3,6 +3,10 @@
 	looking at the solution.
 **/
 
+/** Looked at a solution, and a smart thing was displayed. Instead of
+	returning mid, return low instead.
+**/
+
 class Solution {
 public:
     int searchInsert(vector<int>& nums, int target) {
@@ -10,22 +14,15 @@ public:
         int left = 0;
         int right = nums.size() - 1;
         
-        if(nums[right] < target) return nums.size();
-        else if(nums[left] > target) return left;
-        
-        int mid = 0;
         while(left <= right) {
             
-            cout << mid << " : " << left << " : " << right << endl;
-            mid = (left + right) / 2;
+            int mid = (left + right) / 2;
             
             if(nums[mid] == target) return mid;
             else if(nums[mid] > target) right = mid - 1;
             else left = mid + 1;
         }
         
-        if(nums[mid] < target) mid++;
-        
-        return mid;
+        return left;
     }
 };
