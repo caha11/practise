@@ -1,6 +1,7 @@
 /* The trick is to use an hash map which is the unordered map in c++. So it's pretty straightforward afterwards.
 */
 
+
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
